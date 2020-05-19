@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/style/main.css"> -->
+    <link rel="stylesheet" href="./style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Library</title>
+</head>
+<body>
+
+<div class="container">
+    <header>
+
+            <h1><i class="fas fa-hat-wizard"></i> Manga Library</h1>
+    
+            <button class="button" onclick="openForm()">Add to Library</button>
+                            
+    </header>
+
+                <!-- <section> -->
+    <section>
+
+        <div class="modal" id="modal">
+
+            <div class="modal-content">
+
+                <span></span>
+        
+                <form action="">
+        
+                    <h3>Add New</h3>
+                    <p>
+                        <label for="">Title</label> <br>
+                        <input type="text" id="title">
+                    </p>
+                    <p>
+                        <label for="">Author</label> <br>
+                        <input type="text" id="author">
+                    </p>
+                    <p>
+                        <label for="">Chapters</label> <br>
+                        <input type="number" id="chapters">
+                    </p>
+                    <p>
+                        <select name="" id="read" type="select">
+                            <option value="">Definitely read</option>
+                            <option value="">Not read yet</option>
+                        </select>
+                    </p>
+                    
+                <br>
+                    
+                    <div class = "flex">
+                        <button onclick="submitInput(event)">Add new</button>
+                        <button>Back</button>
+                    </div>
+        
+                </form>  
+
+            </div>
+            
+        </div> 
+
+    </section> 
+
+    <main id="main">
+
+        <div class="div" >
+
+
+            <i class="fas fa-minus-circle"></i>
+
+            <h2 class="title">Konosuba</h2>
+
+            <p class="author"> Natsume Akatsuki </p>
+
+            <p class="chapter"> 67 Chapters </p> 
+
+            <p> <span class="toggle" >Definitely read</span> <i class="fas fa-exchange-alt"></i></p>
+
+        </div>
+
+        <div class="div">
+
+            <i class="fas fa-minus-circle"> </i> 
+
+            <h2 class="title">Konosuba</h2> 
+
+            <p class="author"> Natsume Akatsuki </p>
+
+            <p class="chapter"> 67 Chapters </p>    
+
+            <p> <span class="toggle">Not yet read</span> <i class="fas fa-exchange-alt"></i> </p>           
+
+        </div>
+
+        <div class="div">
+
+            <i class="fas fa-minus-circle"> </i> 
+
+            <h2 class="title">Konosuba</h2> 
+
+            <p class="author"> Natsume Akatsuki </p>
+
+            <p class="chapter"> 67 Chapters </p>    
+
+            <p> <span class="toggle">Not yet read</span> <i class="fas fa-exchange-alt"></i> </p>           
+
+        </div>
+
+        <div class="div">
+
+            <i class="fas fa-minus-circle"> </i> 
+
+            <h2 class="title">Konosuba</h2> 
+
+            <p class="author"> Natsume Akatsuki </p>
+
+            <p class="chapter"> 67 Chapters </p>    
+
+            <p> <span class="toggle">Not yet read</span> <i class="fas fa-exchange-alt"></i> </p>           
+
+        </div>
+
+        <div class="div">
+
+            <i class="fas fa-minus-circle"> </i> 
+
+            <h2 class="title">Konosuba</h2> 
+
+            <p class="author"> Natsume Akatsuki </p>
+
+            <p class="chapter"> 67 Chapters </p>    
+
+            <p> <span class="toggle">Not yet read</span> <i class="fas fa-exchange-alt"></i> </p>           
+
+        </div>
+
+        <div class="div">
+
+            <i class="fas fa-minus-circle"> </i> 
+
+            <h2 class="title">Konosuba</h2> 
+
+            <p class="author"> Natsume Akatsuki </p>
+
+            <p class="chapter"> 67 Chapters </p>    
+
+            <p> <span class="toggle">Not yet read</span> <i class="fas fa-exchange-alt"></i> </p>           
+
+        </div>
+
+        <div class="div">
+
+            <i class="fas fa-minus-circle"> </i> 
+
+            <h2 class="title">Konosuba</h2> 
+
+            <p class="author"> Natsume Akatsuki </p>
+
+            <p class="chapter"> 67 Chapters </p>    
+
+            <p> <span class="toggle">Not yet read</span> <i class="fas fa-exchange-alt"></i> </p>           
+
+        </div>
+
+        <div class="div">
+
+            <i class="fas fa-minus-circle"> </i> 
+
+            <h2 class="title">Konosuba</h2> 
+
+            <p class="author"> Natsume Akatsuki </p>
+
+            <p class="chapter"> 67 Chapters </p>    
+
+            <p> <span class="toggle">Not yet read</span> <i class="fas fa-exchange-alt"></i> </p>           
+
+        </div>
+
+    </main>
+
+
+<footer>
+    <p>
+        <a href="https://github.com/MKaneto?tab=repositories"> <i class="fab fa-github"></i> Created by <b>Kaneto</b></a>
+    </p>
+</footer>
+
+</div>
+
+
+<script src="./js/main.js"></script>
+    
+</body>
+
+
+</html>
