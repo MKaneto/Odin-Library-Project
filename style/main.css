@@ -126,25 +126,16 @@ p {
   
   /* Modal Content */
   .modal-content {
-    /* text-align: center !important; */
-    /* position: relative; */
-    /* margin: auto; */
     background: white;
     padding: 20px 30px;
     border: 1px solid inherit;
     border-radius: 5px;
     /* width: 100%; */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    /* -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s */
   }
 
 form {
     text-align: left;
-    /* color: white; */
-    /* width: 400px; */
     background: white;
 }
 
@@ -190,8 +181,6 @@ footer {
     /* clear: both; */
     padding: 0 20px 0 0;
     margin: 0px 0px 0px 0px;
-    /* padding: 330px 0 0 0 ; */
-    /* padding: 0 0 10px 0; */
     text-align: center;
     /* background: rgb(148,57,72); */
     color: white;
