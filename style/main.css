@@ -84,6 +84,61 @@ main  {
     cursor: pointer;
 }
 
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 28px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(229, 211, 211);
+    border-radius: 3px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(146, 89, 99);
+    border-radius: 2px;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  input:checked + .slider {
+    background-color: black;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -moz-transform: translate(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }  
+
+  /* END HERE */
+
 h2 {
     padding: 0 0 10px 0;
 }
@@ -188,9 +243,24 @@ p {
     margin: auto;   
   }
 
-  .pop-up p {
-      padding: 20px 0 ;
-  }
+.pop-up p {
+    padding: 20px 0 ;
+}
+
+.attention {
+    background: rgb(250, 144, 144);
+    color: rgb(153, 26, 26);
+    width: fit-content;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 3px;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: none;
+}
 
 form {
     text-align: left;

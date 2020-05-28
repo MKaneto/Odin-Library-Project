@@ -16,11 +16,8 @@ function submitInput(event) {
     
     var readInput = document.getElementById("read");
         readValue = readInput.options[readInput.selectedIndex].text;
-        read = document.createTextNode(readValue + " ");
-
-    var shuffleButton = document.createElement ("i");
-        shuffleButton.className = "fas fa-exchange-alt"
-
+        read = document.createTextNode(readValue);
+        
     var deleteButton = document.createElement("i"); // DELETE BUTTON CREATED
         deleteButton.className = "fas fa-minus-circle"; 
        
@@ -32,7 +29,7 @@ function submitInput(event) {
         h2.appendChild(title);
 
 
-        //CREATE P TAG / ADD AUTHOR TO P TAG
+        //CREATE P TAG / ADD CONTENT TO P TAG
     var p1 = document.createElement("p");
     var p2 = document.createElement("p");
     var p3 = document.createElement("p");
@@ -40,10 +37,19 @@ function submitInput(event) {
             p2.appendChild(chapters);
             p3.appendChild(span);
             span.appendChild(read);
-            p3.appendChild(shuffleButton);
-         
 
-        //ADD H2 & P ELEMENTS TO DIV
+        //CREATE SWITCHER
+    var label = document.createElement("label");
+        label.className = "switch";
+    var checkboxInput = document.createElement("input");
+        checkboxInput.type = "checkbox";
+        checkboxInput.className = "checkbox";
+    var switcher = document.createElement("span");
+        switcher.className = "slider";
+        label.appendChild(checkboxInput);
+        label.appendChild(switcher);
+
+        //ADD H2, P & SWITCHER ELEMENTS TO DIV
     var div = document.createElement("div");
         div.className = "div";
         div.appendChild(deleteButton);
@@ -51,18 +57,25 @@ function submitInput(event) {
         div.appendChild(p1);
         div.appendChild(p2);
         div.appendChild(p3);
+        div.appendChild(label);
 
         if (titleValue == "" || authorValue == "" || chaptersValue == "") {
-            alert("Please fill all ( tsubete wo umetekudasai 全てを埋めてください )");
+            document.getElementById("attention").style.display = "block";
         } else {
-            alert("Alright (Yoshi よし ) :)");
 
+            modal.onclick = function(){
+                document.getElementById("attention").style.display = "none";
+            }
             //ADD DIV TO MAIN
             var main = document.getElementById("main");
-                main.appendChild(div);
+                main.appendChild(div); 
+                if(readValue === "Read"){checkboxInput.checked = true;} 
+                else {checkboxInput.checked = false;}
                 modal.style.display = "none";
-                
         }
+
+        
+        
 
         document.getElementById("title").value = "" ;
         document.getElementById("author").value = "" ;
@@ -94,37 +107,37 @@ function submitInput(event) {
 
     
     // toggle between read and not read
-    var shuffleButton = document.getElementsByClassName("fas fa-exchange-alt");
+    var shuffleButton = document.getElementsByClassName("checkbox");
     var toggle = document.getElementsByClassName("toggle");
         for(let i = 0; i < shuffleButton.length; i++) {
 
-            shuffleButton[i].onclick = function() {
-                if (toggle[i].innerHTML == "Not yet read ") {
-                    toggle[i].innerHTML = "Definitely read ";
-                } else {
-                    toggle[i].innerHTML = "Not yet read ";
-                } 
-            } 
-        }   
+            shuffleButton[i].onclick = function(){
+                if(shuffleButton[i].checked === true) {
+                    toggle[i].innerHTML = "Read";
+                }else{
+                    toggle[i].innerHTML = "Not read yet";
+                }
+            }
+        }
 
 }
 
-
+    function goBack() {
+        modal.style.display = "none";
+        document.getElementById("attention").style.display = "none";
+    }
 
 
     function openForm() {
         var modal = document.getElementById("modal"); 
             modal.style.display = "block";
     }
-
-    function goBack() {
-            modal.style.display = "none";
-    }
     
     // click anywhere on the window to close modal
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            document.getElementById("attention").style.display = "none";
         }
     }
 
@@ -153,16 +166,16 @@ function submitInput(event) {
 
 
     // toggle between read and not read
-    var shuffleButton = document.getElementsByClassName("fas fa-exchange-alt");
+    var shuffleButton = document.getElementsByClassName("checkbox");
     var toggle = document.getElementsByClassName("toggle");
         for(let i = 0; i < shuffleButton.length; i++) {
 
-            shuffleButton[i].onclick = function() {
-                if (toggle[i].innerHTML == "Definitely read ") {
-                    toggle[i].innerHTML = "Not yet read ";
-                } else {
-                    toggle[i].innerHTML = "Definitely read ";
-                } 
-            } 
-        }         
+            shuffleButton[i].onclick = function(){
+                if(shuffleButton[i].checked === true) {
+                    toggle[i].innerHTML = "Read";
+                }else{
+                    toggle[i].innerHTML = "Not read yet";
+                }
+            }
+        }
     
