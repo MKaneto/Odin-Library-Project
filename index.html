@@ -3,48 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100;300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Weather App</title>
+    <!-- <link rel="stylesheet" href="/style/main.css"> -->
+    <link rel="stylesheet" href="./style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Library</title>
 </head>
 <body>
-    
+
 <div class="container">
+    <header>
 
-    <div class="app ">
+            <h1><i class="fas fa-hat-wizard"></i> Manga Library</h1>
+    
+            <button class="button" onclick="openForm()">Add to Library</button>
+                            
+    </header>
 
-        <header><h2>Weather</h2></header>
+                <!-- <section> -->
+    <section>
 
-        <div class="notification">
-            
-        </div>
+        <div class="modal" id="modal">
 
-        <div class="weather-container">
+            <div class="modal-content">
 
-            <div class="weather-icon">
-
-                <img src="./img/cloud.png" alt="">
+                <span></span>
+        
+                <form action="">
+        
+                    <h3>Add New</h3>
+                    <p>
+                        <label for="">Title</label> <br>
+                        <input type="text" id="title">
+                    </p>
+                    <p>
+                        <label for="">Author</label> <br>
+                        <input type="text" id="author">
+                    </p>
+                    <p>
+                        <label for="">Chapters</label> <br>
+                        <input type="number" id="chapters">
+                    </p>
+                    <p>
+                        <select name="" id="read" type="select">
+                            <option value="">Definitely read</option>
+                            <option value="">Not read yet</option>
+                        </select>
+                    </p>
+                    
+                <br>
+                    
+                    <div class = "flex">
+                        <button onclick="submitInput(event)" type="button">Add new</button>
+                        <button type="button" onclick="goBack()">Back</button>
+                    </div>
+        
+                </form>  
 
             </div>
-
-            <div class="temp-value"><p onclick="change()" onmouseover="pointer()">-</p></div>
-
-            <div class="temp-description"> <p> - </p></div>
-
-            <div class="location"><p> - </p></div>
             
-            <input type="text" id="city" placeholder="Location"> <br> 
-            <button id="search" onclick="getWeather()">Search</button>
+        </div> 
+
+        <div class="popUpConfirmation" id="confirm">
+            <div class="pop-up">
+                <h4>CONFIRMATION</h4>
+                <p>Delete Card?</p>
+                <button id="yes">Yes. Delete</button>
+                <button id="no">No. Go Back</button>
+            </div>
+        </div>
+
+    </section> 
+
+    <main id="main">
+
+        <div class="div">
+
+            <i class="fas fa-minus-circle"> </i> 
+
+            <h2 class="title">Konosuba</h2> 
+
+            <p class="author"> Natsume Akatsuki </p>
+
+            <p class="chapter"> 67 Chapters </p>    
+
+            <p> <span class="toggle">Not yet read</span> <i class="fas fa-exchange-alt"></i> </p>           
 
         </div>
 
-    </div>
+    </main>
+
+
+<footer>
+    <p>
+        <a href="https://gitlab.com/Kaneto/Odin-Library-Project"> <i class="fab fa-gitlab"></i> Created by <b>Kaneto</b></a> <br><br>
+        <a href="https://github.com/MKaneto/Odin-Library-Project"> <i class="fab fa-github"></i> Created by <b>Kaneto</b></a>
+    </p>
+</footer>
 
 </div>
 
+
+<script src="./js/main.js"></script>
+    
 </body>
-<script src="main.js"></script>
+
+
 </html>

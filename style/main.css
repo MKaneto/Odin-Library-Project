@@ -19,7 +19,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    /* height: auto; */
     height: 650px;
 
     font-family: 'Poiret One', cursive;
@@ -68,7 +67,6 @@ main  {
     display: flex;
     flex-wrap: wrap;
     margin-right: 350px;
-    /* margin-bottom: -300px; */
 }
 
 .div {
@@ -105,8 +103,9 @@ p {
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
-    padding: 100px 400px; 
+    padding: 0px 0px 0px 0px; 
     /* Location of the box */
+    margin: auto;
     top: 0;
     right: 0;
     left: 0;
@@ -128,10 +127,69 @@ p {
   .modal-content {
     background: white;
     padding: 20px 30px;
+    position: fixed;
+    top: 220px;
+    left: 450px;
+    right: 450px;
     border: 1px solid inherit;
     border-radius: 5px;
-    /* width: 100%; */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:220px; opacity:1}
+}
+
+@-moz-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:220px; opacity:1}
+}
+
+@-o-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:220px; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:220px; opacity:1}
+}
+
+  /* POP UP */
+.popUpConfirmation {
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 250px 0px;
+    background-color: rgb(0,0,0);
+    /* Fallback color */
+    background-color: rgba(0,0,0,0.4); 
+    /* Black with opacity */
+}
+
+.pop-up{
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 3px;
+    margin: auto;   
+  }
+
+  .pop-up p {
+      padding: 20px 0 ;
   }
 
 form {
@@ -180,7 +238,7 @@ form p {
 footer {
     /* clear: both; */
     padding: 0 20px 0 0;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 20px 0px;
     text-align: center;
     /* background: rgb(148,57,72); */
     color: white;
@@ -196,5 +254,4 @@ a {
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-    /* font-weight: 900; */
 }

@@ -39,7 +39,6 @@ function submitInput(event) {
             p1.appendChild(author);
             p2.appendChild(chapters);
             p3.appendChild(span);
-            // span.setAttribute("id","ready");
             span.appendChild(read);
             p3.appendChild(shuffleButton);
          
@@ -56,7 +55,7 @@ function submitInput(event) {
         if (titleValue == "" || authorValue == "" || chaptersValue == "") {
             alert("Please fill all ( tsubete wo umetekudasai 全てを埋めてください )");
         } else {
-            alert("Yoshi ( よし ) :)");
+            alert("Alright (Yoshi よし ) :)");
 
             //ADD DIV TO MAIN
             var main = document.getElementById("main");
@@ -70,18 +69,32 @@ function submitInput(event) {
         document.getElementById("chapters").value = "" ;
          
 
-        // Click on a close button to hide the current card
+
+    // Click on a close button to hide the current card
     var deleteButton = document.getElementsByClassName("fas fa-minus-circle");
-            
+    var confirm = document.getElementById("confirm");
+    var yes = document.getElementById("yes");
+    var no = document.getElementById("no");
+
         for(let i = 0; i < deleteButton.length; i++) {
             deleteButton[i].onclick = function deleteItem() {
-                this.parentElement.style.display = "none";
-            }   
+                confirm.style.display = "block";
+
+                yes.onclick = function(event){  
+                    event.preventDefault();
+                    deleteButton[i].parentElement.style.display = "none";
+                    confirm.style.display = "none";
+                }
+
+                no.onclick = function(){
+                    confirm.style.display = "none";
+                }
+            }
         }
 
-           // toggle between read and not read
+    
+    // toggle between read and not read
     var shuffleButton = document.getElementsByClassName("fas fa-exchange-alt");
-    // var toggle = document.getElementById("ready");
     var toggle = document.getElementsByClassName("toggle");
         for(let i = 0; i < shuffleButton.length; i++) {
 
@@ -92,7 +105,8 @@ function submitInput(event) {
                     toggle[i].innerHTML = "Not yet read ";
                 } 
             } 
-        }         
+        }   
+
 }
 
 
@@ -101,7 +115,10 @@ function submitInput(event) {
     function openForm() {
         var modal = document.getElementById("modal"); 
             modal.style.display = "block";
-    
+    }
+
+    function goBack() {
+            modal.style.display = "none";
     }
     
     // click anywhere on the window to close modal
@@ -113,17 +130,30 @@ function submitInput(event) {
 
     // Click on a close button to hide the current card
     var deleteButton = document.getElementsByClassName("fas fa-minus-circle");
-            
+    var confirm = document.getElementById("confirm");
+    var yes = document.getElementById("yes");
+    var no = document.getElementById("no");
+
         for(let i = 0; i < deleteButton.length; i++) {
             deleteButton[i].onclick = function deleteItem() {
-                this.parentElement.style.display = "none";
-            }   
+                confirm.style.display = "block";
+
+                yes.onclick = function(event){  
+                    event.preventDefault();
+                    deleteButton[i].parentElement.style.display = "none";
+                    confirm.style.display = "none";
+                }
+
+                no.onclick = function(){
+                    confirm.style.display = "none";
+                }
+            }
         }
+
 
 
     // toggle between read and not read
     var shuffleButton = document.getElementsByClassName("fas fa-exchange-alt");
-    // var toggle = document.getElementById("ready");
     var toggle = document.getElementsByClassName("toggle");
         for(let i = 0; i < shuffleButton.length; i++) {
 
