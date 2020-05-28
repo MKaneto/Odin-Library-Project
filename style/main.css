@@ -397,7 +397,7 @@ a {
       .modal-content {
         background: white;
         padding: 20px 30px;
-        position: fixed;
+        position: absolute;
         top: 90px;
         left: 0px;
         right: 0px;
