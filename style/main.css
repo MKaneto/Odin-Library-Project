@@ -430,6 +430,22 @@ a {
       to {top:120px; opacity:1}
     }
     
+    .attention {
+        background: rgb(250, 144, 144);
+        color: rgb(153, 26, 26);
+        width: fit-content;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 3px;
+        position: fixed;
+        z-index: 1;
+        top: 150px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        display: none;
+    }
+
     
     form {
         text-align: left;
