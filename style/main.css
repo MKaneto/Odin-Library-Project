@@ -359,7 +359,7 @@ a {
         width: 150px;
         padding: 10px 5px 10px 5px;
         box-shadow: 5px 5px 20px black;
-        margin: 0 10px 10px 10px;
+        margin: auto;
     }
     
     h2 {
@@ -398,12 +398,37 @@ a {
         background: white;
         padding: 20px 30px;
         position: fixed;
-        top: 220px;
+        top: 120px;
         left: 0px;
         right: 0px;
         margin: auto;
         width: 70%;
-      }
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+    
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:120px; opacity:1}
+    }
+    
+    @-moz-keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:120px; opacity:1}
+    }
+    
+    @-o-keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:120px; opacity:1}
+    }
+    
+    @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:120px; opacity:1}
+    }
     
     
     form {
