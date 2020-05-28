@@ -326,7 +326,7 @@ a {
 @media screen and (max-width: 1000px) {
 
     .container {
-        padding: 70px 30px 0px 30px;
+        padding: 70px 20px 0px 20px;
         background-image: url("../img/bg3.jpg");
         background-position: right 0;
         background-repeat: no-repeat;
@@ -398,7 +398,7 @@ a {
         background: white;
         padding: 20px 30px;
         position: fixed;
-        top: 120px;
+        top: 90px;
         left: 0px;
         right: 0px;
         margin: auto;
@@ -427,7 +427,7 @@ a {
     
     @keyframes animatetop {
       from {top:-300px; opacity:0}
-      to {top:120px; opacity:1}
+      to {top:90px; opacity:1}
     }
     
     .attention {
@@ -439,7 +439,7 @@ a {
         border-radius: 3px;
         position: fixed;
         z-index: 1;
-        top: 150px;
+        top: 130px;
         right: 0;
         left: 0;
         margin: auto;
