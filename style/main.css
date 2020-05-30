@@ -304,16 +304,20 @@ form p {
 }
 
 footer {
-    padding: 0 20px 0 0;
-    margin: 0px 0px 20px 0px;
+    padding: 135px 30px 30px 30px;
     text-align: center;
     color: white;
     font-family: inherit;
-    position: absolute;
-    height: 50px;
-    display: table-row;
+    height: fit-content;
+    width: 100%;
+}
+
+footer p {
+    left: 0;
+    top: 0;
     bottom: 0;
-    right: 0;
+    right: 0; 
+    margin: auto;
 }
 
 a {
@@ -491,16 +495,20 @@ a {
     }
     
     footer {
-        padding: 0 20px 0 0;
-        margin: 0px 0px 0px 0px;
+        padding: 240px 30px 30px 30px;
         text-align: center;
         color: white;
         font-family: inherit;
-        position: absolute;
-        height: 80px;
-        display: table-row;
+        height: fit-content;
+        width: 100%;
+    }
+
+    footer p {
+        left: 0;
+        top: 0;
         bottom: 0;
-        right: 0;
+        right: 0; 
+        margin: auto;
     }
     
     a {
